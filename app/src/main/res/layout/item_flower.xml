@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -13,7 +15,7 @@
             android:id="@+id/imgFlower"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_scaleType="centerCrop"
+            android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,13 +25,21 @@
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toRightOf="@id/imgFlower"
             app:layout_constraintTop_toTopOf="parent" />
+        
+        <TextView
+            android:id="@+id/txtLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            app:layout_constraintLeft_toLeftOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"/>
 
         <TextView
             android:id="@+id/txtPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="@+id/txtName"
-            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+            app:layout_constraintLeft_toLeftOf="@+id/txtLabel"
+            app:layout_constraintTop_toBottomOf="@+id/txtLabel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
